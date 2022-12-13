@@ -93,8 +93,8 @@ app.post("/calculateEMI", authentication,async (req, res) => {
 
 app.get("/getCalculation", authentication, async (req, res) => {
     const {user_id} = req.body;
-    const all_bmi = await EMIModel.find({user_id : user_id})
-    res.send({history : all_bmi})
+    const all_emi = await EMIModel.find({user_id : user_id})
+    res.send({history : all_emi})
 })
 
 
